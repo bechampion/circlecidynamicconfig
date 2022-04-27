@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Terraform Apply Generate config
           command: |
-            echo "Generate config if apply is due"
+            echo "If Seconds of now is even then run apply_generated_config.yml else noop"
             if [[ $(expr $(date +%s) % 2) == 0 ]]
             then
             cp .circleci/apply_generated_config.yml .circleci/generated_config.yml
