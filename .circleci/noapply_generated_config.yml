@@ -1,3 +1,21 @@
 ---
 version: 2.1
 
+executors:
+  build-image:
+    docker:
+      - image: alpine:latest
+
+jobs:
+  noop:
+    executor: build-image
+    steps:
+      - run:
+          name: Noop
+          command: |
+            echo "noop"
+
+workflows:
+  terraform_flow:
+    jobs:
+      - noop
