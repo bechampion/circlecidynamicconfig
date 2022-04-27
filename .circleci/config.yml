@@ -14,6 +14,7 @@ jobs:
           name: Terraform plan
           command: |
             echo "plan"
+            cat generated_config.yml
       - run:
           name: Terraform Apply Generate config
           command: |
