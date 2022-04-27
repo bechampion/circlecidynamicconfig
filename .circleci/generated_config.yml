@@ -1,0 +1,14 @@
+jobs:
+  apply:
+    executor: continuation/default
+    steps:
+      - checkout
+      - run:
+          name: Terraform Real apply
+          command: |
+            echo "apply"
+
+workflows:
+  setup:
+    jobs:
+      - apply
