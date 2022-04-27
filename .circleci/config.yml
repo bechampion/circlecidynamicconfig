@@ -19,6 +19,7 @@ jobs:
           name: Terraform Apply Generate config
           command: |
             echo "Generate config if apply is due"
+            cp noapply_generated_config generated_config.yml
       - continuation/continue:
           configuration_path: .circleci/generated_config.yml
 
