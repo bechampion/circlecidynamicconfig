@@ -1,14 +1,22 @@
+---
+version: 2.1
+
+executors:
+  build-image:
+    docker:
+      - image: alpine:latest
+
 jobs:
   apply:
-    executor: continuation/default
+    executor: build-image
     steps:
       - checkout
       - run:
-          name: Terraform Real apply
+          name: Applying Terraform Plan
           command: |
-            echo "apply"
+            echo "Apply"
 
 workflows:
-  setup:
+  terraform_flow:
     jobs:
       - apply
