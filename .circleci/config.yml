@@ -18,7 +18,12 @@ jobs:
           name: Terraform Apply Generate config
           command: |
             echo "Generate config if apply is due"
+            if [[ $(expr $(date +%s) % 2) == 0 ]]
+            then
             cp .circleci/apply_generated_config.yml .circleci/generated_config.yml
+            else
+            cp .circleci/noop_generated_config.yml .circleci/generated_config.yml
+            fi
 
       - continuation/continue:
           configuration_path: .circleci/generated_config.yml
