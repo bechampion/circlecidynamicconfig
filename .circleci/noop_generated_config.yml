@@ -7,7 +7,7 @@ executors:
       - image: alpine:latest
 
 jobs:
-  noop:
+  apply:
     executor: alpine
     steps:
       - run:
