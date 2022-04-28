@@ -24,5 +24,3 @@ workflows:
             - hold
       - hold:
           type: approval
-          requires:
-            - apply
