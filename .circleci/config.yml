@@ -18,8 +18,8 @@ jobs:
           name: Terraform plan
           command: |
             echo "plan"
-            apt update
-            apt install curl jq
+            apt-get -y update
+            apt-get -y install curl jq
       - run:
           name: Terraform Apply Generate config
           command: |
