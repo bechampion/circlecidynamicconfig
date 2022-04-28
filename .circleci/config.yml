@@ -38,7 +38,3 @@ workflows:
   plan:
     jobs:
       - plan
-      - hold:
-          type: approval
-          requires:
-            - plan

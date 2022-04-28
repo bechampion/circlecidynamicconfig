@@ -20,6 +20,7 @@ workflows:
   terraform_flow:
     jobs:
       - apply:
+      - hold:
+          type: approval
           requires:
-            - hold
-            
+            - apply
