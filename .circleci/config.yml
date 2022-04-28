@@ -35,7 +35,6 @@ jobs:
           configuration_path: .circleci/generated_config.yml
 
 workflows:
-  version: 2
   someworkflow:
     jobs:
       - setup
