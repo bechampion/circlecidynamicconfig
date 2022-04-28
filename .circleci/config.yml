@@ -2,23 +2,22 @@ version: 2.1
 
 setup: true
 executors:
-  alpine:
+  ubuntu:
     docker:
-      - image: alpine:latest
+      - image: ubuntu:latest
 
 orbs:
   continuation: circleci/continuation@0.1.2
 
 jobs:
   setup:
-    executor: alpine
+    executor: ubuntu
     steps:
       - checkout
       - run:
           name: Terraform plan
           command: |
             echo "plan"
-            apk add curl jq
       - run:
           name: Terraform Apply Generate config
           command: |
