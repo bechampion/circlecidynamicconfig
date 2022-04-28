@@ -35,6 +35,7 @@ jobs:
           configuration_path: .circleci/generated_config.yml
 
 workflows:
+  version: 2
   setup:
     triggers:
       - schedule:
@@ -43,6 +44,5 @@ workflows:
             branches:
               only:
                 - main
-  when: << pipeline.parameters.run-schedule >>
   jobs:
       - setup
