@@ -1,2 +1,16 @@
 ---
 version: 2.1
+
+
+jobs:
+  noop:
+    steps:
+      - run:
+          name: Noop
+          command: |
+            echo "noop"
+
+workflows:
+  terraform_flow:
+    jobs:
+      - noop
