@@ -18,6 +18,7 @@ jobs:
           name: Terraform plan
           command: |
             echo "plan"
+            apk add curl jq
       - run:
           name: Terraform Apply Generate config
           command: |
