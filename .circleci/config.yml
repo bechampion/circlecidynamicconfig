@@ -31,6 +31,7 @@ jobs:
             cp .circleci/apply_generated_config.yml .circleci/generated_config.yml
             fi
 
+
       - continuation/continue:
           configuration_path: .circleci/generated_config.yml
 
