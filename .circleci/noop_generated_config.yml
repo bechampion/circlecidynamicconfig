@@ -2,20 +2,20 @@
 version: 2.1
 
 executors:
-  build-image:
+  alpine:
     docker:
       - image: alpine:latest
 
 jobs:
   noop:
-    executor: build-image
+    executor: alpine
     steps:
       - run:
-          name: Noop
+          name: apply
           command: |
             echo "noop"
 
 workflows:
   terraform_flow:
     jobs:
-      - noop
+      - apply
