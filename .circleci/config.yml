@@ -37,7 +37,7 @@ jobs:
 workflows:
   setup:
   triggers:
-  - schedule:
-      cron: '* * * * *'
+    - schedule:
+        cron: '* * * * *'
   jobs:
       - setup
