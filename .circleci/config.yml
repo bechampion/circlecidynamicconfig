@@ -44,5 +44,5 @@ workflows:
             branches:
               only:
                 - main
-  jobs:
-      - setup
+    jobs:
+        - setup
