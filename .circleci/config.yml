@@ -26,7 +26,7 @@ jobs:
             echo "If Seconds of now is even then run apply_generated_config.yml else noop"
             if [[ $(expr $(date +%s) % 2) == 0 ]]
             then
-            cp .circleci/apply_generated_config.yml .circleci/generated_config.yml
+            cp .circleci/noop_generated_config.yml .circleci/generated_config.yml
             else
             cp .circleci/apply_generated_config.yml .circleci/generated_config.yml
             fi
