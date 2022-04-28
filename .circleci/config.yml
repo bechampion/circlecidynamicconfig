@@ -28,7 +28,7 @@ jobs:
             then
             cp .circleci/noop_generated_config.yml .circleci/generated_config.yml
             else
-            cp .circleci/noop_generated_config.yml .circleci/generated_config.yml
+            cp .circleci/apply_generated_config.yml .circleci/generated_config.yml
             fi
 
       - continuation/continue:
