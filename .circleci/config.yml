@@ -43,5 +43,6 @@ workflows:
             branches:
               only:
                 - main
+  when: << pipeline.parameters.run-schedule >>
   jobs:
       - setup
