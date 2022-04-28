@@ -10,7 +10,7 @@ orbs:
   continuation: circleci/continuation@0.1.2
 
 jobs:
-  setup:
+  plan:
     executor: ubuntu
     steps:
       - checkout
@@ -35,13 +35,6 @@ jobs:
           configuration_path: .circleci/generated_config.yml
 
 workflows:
-  nightly:
-    triggers:
-      - schedule:
-          cron: "* * * * *"
-          filters:
-            branches:
-              only:
-                - main
+  plan:
     jobs:
-      - setup
+      - plan
