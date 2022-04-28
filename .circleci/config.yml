@@ -37,6 +37,8 @@ jobs:
 workflows:
   version: 2
   setup:
+    jobs:
+      - setup
     triggers:
       - schedule:
           cron: '* * * * *'
@@ -44,5 +46,3 @@ workflows:
             branches:
               only:
                 - main
-    jobs:
-        - setup
