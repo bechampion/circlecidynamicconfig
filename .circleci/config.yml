@@ -45,3 +45,5 @@ workflows:
                 - main
     jobs:
       - setup
+  jobs:
+    - setup
