@@ -35,10 +35,9 @@ jobs:
           configuration_path: .circleci/generated_config.yml
 
 workflows:
-  version: 2
-  triggers:
-    - schedule:
-        cron: '* * * * *'
   setup:
-    jobs:
+  triggers:
+  - schedule:
+      cron: '* * * * *'
+  jobs:
       - setup
